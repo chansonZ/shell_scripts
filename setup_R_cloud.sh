@@ -44,3 +44,7 @@ sudo gdebi rstudio-server-0.99.435-amd64.deb
 ## Shiny Server
 wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
 sudo gdebi shiny-server-1.3.0.403-amd64.deb
+
+## Give permission to folders
+sudo chmod -R 777 /srv
+sudo chmod -R 777 /usr
