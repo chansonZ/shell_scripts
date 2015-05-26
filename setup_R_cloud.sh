@@ -93,3 +93,14 @@ sudo apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip sharutils rar
 
 ## TeX stuff for pdf (OK)
 sudo apt-get -y install texlive-latex-base texlive-fonts-recommended texlive-full
+
+
+## ==============================================================================
+## Extra R Packages
+## ==============================================================================
+
+sudo su - -c "R -e \"devtools::install_github('ramnathv/htmlwidgets')\""
+sudo su - -c "R -e \"devtools::install_github('bokeh/rbokeh')\""
+
+
+
