@@ -10,17 +10,11 @@ gpg --keyserver keyserver.ubuntu.com --recv E084DAB9 && gpg --export --armor E08
 sudo apt-get remove -y laptop-mode-tools
 sudo add-apt-repository -y ppa:linrunner/tlp
 
-## Nvidia Prime Indicator (OK)
-#sudo add-apt-repository -y ppa:nilarimogard/webupd8
-
 ## Java (OK)
 sudo add-apt-repository -y ppa:webupd8team/java
 
 ## File Sync (OK)
 sudo add-apt-repository -y ppa:freefilesync/ffs
-
-## ATOM Text Editor (OK)
-#sudo add-apt-repository -y ppa:webupd8team/atom
 
 ## Weather and calendar
 sudo add-apt-repository -y ppa:atareao/atareao
@@ -47,11 +41,12 @@ sudo add-apt-repository -y ppa:team-xbmc/ppa
 ## Copy
 sudo add-apt-repository -y ppa:paolorotolo/copy
 
-## Nvidia
-#sudo add-apt-repository -y ppa:xorg-edgers/ppa
-
 ## Caffeinate
 sudo add-apt-repository -y ppa:caffeine-developers/ppa
+
+## White Noise
+sudo add-apt-repository -y ppa:costales/anoise
+
 
 ## ====================================================================
 ## Update Repo Once
@@ -87,14 +82,6 @@ sudo apt-get -y install oracle-java8-installer oracle-java8-set-default
 ## The rest
 ## ====================================================================
 
-## Nvidia driver (OK)
-#sudo apt-get purge bumblebee*
-#sudo apt-get purge libvdpau-va-gl1
-#sudo apt-get -y install nvidia-prime
-
-## Nvidia Prime Indicator (OK)
-#sudo apt-get -y install prime-indicator
-
 ## CPU Freq and System Indicators (OK)
 sudo apt-get -y install gnome-applets cpufrequtils
 sudo apt-get -y install indicator-cpufreq indicator-multiload
@@ -112,8 +99,7 @@ sudo apt-get -y install git && git config --global user.name "Jo-fai Chow" && gi
 sudo apt-get -y install git-cola
 
 ## Install R later
-sudo apt-get -y install r-base=3.1.3-1trusty r-base-core=3.1.3-1trusty r-base-dev=3.1.3-1trusty r-recommended=3.1.3-1trusty
-#sudo apt-get -y install r-base r-base-core r-base-dev r-recommended
+sudo apt-get -y install r-base r-base-core r-base-dev r-recommended
 sudo apt-get -y install ssh-askpass libopenblas-base libcurl4-openssl-dev libxml2-dev libtiff4-dev libxt-dev
 sudo apt-get -y install libgdal1-dev libproj-dev
 sudo apt-get -y install libglu1-mesa-dev
@@ -153,16 +139,13 @@ sudo apt-get -y install npm
 sudo apt-get -y install gummi
 
 ## Docky (OK)
-#sudo apt-get -y install docky
+sudo apt-get -y install docky
 
 ## Pandoc (OK)
 sudo apt-get -y install pandoc
 
 ## Java HUD
 sudo apt-get -y install jayatana
-
-## ATOM Text Editor
-#sudo apt-get -y install atom
 
 ## Firefox fix
 sudo apt-get -y install gstreamer0.10-ffmpeg
@@ -300,12 +283,9 @@ sudo cp copy-icons/copy_dark.svg /usr/share/icons/hicolor/scalable/apps/copy.svg
 ## Caffeinate
 sudo apt-get install -y caffeine
 
+## White Noise
+sudo apt-get -y install anoise anoise-community-extension1
 
-## ====================================================================
-## Nvidia
-## ====================================================================
-
-#sudo apt-get install -y nvidia-346
 
 ## ====================================================================
 ## Final Clean Up and Reboot
