@@ -47,6 +47,9 @@ sudo add-apt-repository -y ppa:caffeine-developers/ppa
 ## White Noise
 sudo add-apt-repository -y ppa:costales/anoise
 
+## ffmpeg
+sudo add-apt-repository -y ppa:mc3man/trusty-media
+
 
 ## ====================================================================
 ## Update Repo Once
@@ -163,6 +166,7 @@ sudo apt-get -y install libappindicator1
 sudo apt-get install -y gstreamer0.10-plugins-ugly gxine libdvdread4 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 libavcodec-extra
 sudo /usr/share/doc/libdvdread4/install-css.sh
 sudo apt-get install -y libxine1-ffmpeg mencoder
+sudo apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
 ## Compression
 sudo apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip sharutils rar uudeview mpack arj cabextract file-roller
