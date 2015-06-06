@@ -150,6 +150,9 @@ sudo apt-get -y install pandoc
 ## Java HUD
 sudo apt-get -y install jayatana
 
+## Chromium
+sudo apt-get install chromium-browser
+
 ## Firefox fix
 sudo apt-get -y install gstreamer0.10-ffmpeg
 sudo apt-get -y install pepperflashplugin-nonfree
