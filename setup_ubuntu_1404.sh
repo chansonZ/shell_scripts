@@ -153,7 +153,8 @@ sudo apt-get -y install jayatana
 ## Chromium
 sudo apt-get install chromium-browser
 
-## Firefox fix
+## Chromium and Firefox fix
+sudo apt-get -y install chromium-browser
 sudo apt-get -y install gstreamer0.10-ffmpeg
 sudo apt-get -y install pepperflashplugin-nonfree
 
