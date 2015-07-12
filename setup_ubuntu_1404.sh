@@ -50,6 +50,14 @@ sudo add-apt-repository -y ppa:costales/anoise
 ## ffmpeg
 sudo add-apt-repository -y ppa:mc3man/trusty-media
 
+## PyCharm
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+
+## Bluegriffon WYSIWYG HTML editor
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+
 
 ## ====================================================================
 ## Update Repo Once
@@ -254,6 +262,20 @@ sudo apt-get -y install tor-browser
 sudo apt-get -y install python-software-properties pkg-config
 sudo apt-get -y install software-properties-common
 sudo apt-get -y install xbmc
+
+
+## ====================================================================
+## PyCharm
+## ====================================================================
+
+sudo apt-get -y install pycharm
+
+
+## ====================================================================
+## Bluegriffon WYSIWYG HTML editor
+## ====================================================================
+
+sudo apt-get -y install bluegriffon
 
 
 ## ====================================================================
