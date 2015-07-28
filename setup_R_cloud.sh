@@ -38,8 +38,8 @@ sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
 sudo bash -c "echo 'vm.swappiness = 10' >> /etc/sysctl.conf"
 
 ## Java (OK)
-echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-sudo apt-get -y install oracle-java9-installer oracle-java9-set-default
+echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo apt-get -y install oracle-java7-installer oracle-java7-set-default
 
 ## Git (OK)
 sudo apt-get -y install git && git config --global user.name "Jo-fai Chow" && git config --global user.email jofai.chow@gmail.com
@@ -57,7 +57,7 @@ sudo apt-get -y install nginx
 ## ==============================================================================
 
 ## Install R
-sudo apt-get -y install r-base r-base-core r-base-dev r-recommended
+#sudo apt-get -y install r-base r-base-core r-base-dev r-recommended
 sudo apt-get -y install ssh-askpass libopenblas-base libcurl4-openssl-dev libxml2-dev libtiff4-dev libxt-dev
 sudo apt-get -y install libgdal1-dev libproj-dev
 sudo apt-get -y install libglu1-mesa-dev
@@ -67,6 +67,22 @@ sudo apt-get -y install libfftw3-dev
 ## Libraries for devtools
 sudo apt-get -y install libcurl4-gnutls-dev libxml2-dev libssl-dev
 
+## Install RRO
+cd /tmp
+wget https://mran.revolutionanalytics.com/install/RRO-3.2.1-Ubuntu-14.04.x86_64.tar.gz
+wget https://mran.revolutionanalytics.com/install/RevoMath-3.2.1.tar.gz
+
+tar -xzf RRO-3.2.1-Ubuntu-14.04.x86_64.tar.gz
+cd RRO-3.2.1
+sudo ./install.sh
+
+cd ..
+tar -xzf RevoMath-3.2.1.tar.gz
+cd RevoMath
+sudo ./RevoMath.sh
+cd ..
+
+
 ## Install key R packages as root
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
@@ -74,12 +90,12 @@ sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.co
 
 ## RStudio Server
 sudo apt-get -y install libapparmor1 gdebi-core
-wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.441-amd64.deb
-sudo gdebi rstudio-server-0.99.441-amd64.deb
+wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.467-amd64.deb
+sudo gdebi rstudio-server-0.99.467-amd64.deb
 
 ## Shiny Server
-wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
-sudo gdebi shiny-server-1.3.0.403-amd64.deb
+wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.0.721-amd64.deb
+sudo gdebi shiny-server-1.4.0.721-amd64.deb
 
 ## ==============================================================================
 ## Other Stuff
@@ -93,14 +109,4 @@ sudo apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip sharutils rar
 
 ## TeX stuff for pdf (OK)
 sudo apt-get -y install texlive-latex-base texlive-fonts-recommended texlive-full
-
-
-## ==============================================================================
-## Extra R Packages
-## ==============================================================================
-
-sudo su - -c "R -e \"devtools::install_github('ramnathv/htmlwidgets')\""
-sudo su - -c "R -e \"devtools::install_github('bokeh/rbokeh')\""
-
-
 
