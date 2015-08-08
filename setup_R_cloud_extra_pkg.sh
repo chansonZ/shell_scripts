@@ -13,3 +13,6 @@ sudo su - -c "R -e \"install.packages('data.table', repos='http://cran.rstudio.c
 sudo su - -c "R -e \"install.packages('dplyr', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('rvest', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"devtools::install_github('htmlwidgets/sparkline')\""
+sudo su - -c "R -e \"install.packages('ggthemes', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('directlabels', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('caret', repos='http://cran.rstudio.com/')\""
